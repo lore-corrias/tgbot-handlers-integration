@@ -6,6 +6,11 @@
     <groupId>com.justlel.tgbot</groupId>
     <artifactId>tgbot-handlers-integration</artifactId>
     <version>1.0</version>
+    <properties>
+        <java.version>16</java.version>
+        <maven.compiler.release>16</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <build>
         <plugins>
             <plugin>
