@@ -1,4 +1,4 @@
-package com.justlel.tgbot.models;
+package io.github.justlel.models;
 
 import com.pengrad.telegrambot.model.Update;
 import org.jetbrains.annotations.Nullable;
@@ -12,13 +12,13 @@ import java.util.Map;
  * A specific update handler is defined as a handler that behaves differently depending
  * on changes of a specific field/s of the update object, and doesn't therefore behave
  * on a general bases. For example, a specific update handler could be used to handle
- * updates of a type like {@link com.justlel.tgbot.models.UpdatesDispatcher.MessageUpdateTypes#COMMAND},
+ * updates of a type like {@link UpdatesDispatcher.MessageUpdateTypes#COMMAND},
  * as they are all defined by the same UpdateType, and are yet managed differently depending on the command received.
  * Because of this, a specific update handler registers different handlers, all of which are indexed by a specific identifier.
  * The type of the identifier is determined by the parameter T, while the dispatching of the update is managed by the
  * method {@link #dispatchUpdate}, as defined by the child classes.
  * To register a handler for a specific update, use the {@link #registerSpecificHandler} method.
- * To see an example of Generic update handler, check the class {@link com.justlel.tgbot.models.GenericUpdateHandler}.
+ * To see an example of Generic update handler, check the class {@link GenericUpdateHandler}.
  *
  * @param <T> The type of the identifier for the update handler.
  * @author justlel

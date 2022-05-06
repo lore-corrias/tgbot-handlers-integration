@@ -1,4 +1,4 @@
-package com.justlel.tgbot.api;
+package io.github.justlel.api;
 
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.request.InlineKeyboardMarkup;

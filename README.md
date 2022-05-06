@@ -36,10 +36,9 @@ an object of the handler class and register it with the UpdatesDispatcher.
 This is an example of a generic update handler, which handles all the updates of a same type:
 
 ```java
-import com.justlel.tgbot.api.ActionsAPIHelper;
-import com.justlel.tgbot.models.GenericUpdateHandler;
-import com.justlel.tgbot.models.HandlerInterface;
-import com.justlel.tgbot.models.UpdatesDispatcher;
+import ActionsAPIHelper;
+import GenericUpdateHandler;
+import UpdatesDispatcher;
 import com.pengrad.telegrambot.model.Update;
 
 public class MyBot {
@@ -57,7 +56,7 @@ public class MyBot {
                 ActionsAPIHelper.sendMessage("Welcome!", update.message().chat().id());
             }
         });
-        
+
         // Run the bot
         dispatcher.runUpdateListener(bot);
     }
@@ -68,8 +67,8 @@ However, you can also register sub-handlers for updates. For example, you can re
 all incoming bot commands: in order to do it, create a class that extends the SpecificUpdatesHandler
 
 ```java
-import com.justlel.tgbot.models.HandlerInterface;
-import com.justlel.tgbot.models.UpdatesDispatcher;
+import HandlerInterface;
+import UpdatesDispatcher;
 
 public class CommandsHandler extends SpecificUpdatesHandler<String> {
 
@@ -125,7 +124,7 @@ bot-admins: [123456789, 123456789]
 
 ```java
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.justlel.tgbot.configs.YamlManager;
+import YamlManager;
 
 import java.util.HashMap;
 
@@ -137,6 +136,7 @@ public class MyConfig implements YamlInterface {
     private void setBotToken(String botToken) {
         MyConfig.botToken = botToken;
     }
+
     @JsonProperty("bot-admins") // specify the property using Jackson
     private void setBotAdmins(List<Long> botAdmins) {
         MyConfig.botAdmins = botAdmins;
@@ -149,6 +149,7 @@ public class MyConfig implements YamlInterface {
     public static List<Long> getBotAdmins() {
         return botAdmins;
     }
+
     public static String getBotToken() {
         return botToken;
     }
@@ -198,8 +199,8 @@ Its methods are static, and implement some functionalities that are useful and o
 the automatic disabilitation of Web Pages Previews). Examples are shown below:
 
 ```java
-import com.justlel.tgbot.api.ActionsAPIHelper;
-import com.justlel.tgbot.models.GenericUpdateHandler;
+import ActionsAPIHelper;
+import GenericUpdateHandler;
 import com.pengrad.telegrambot.response.BaseResponse;
 
 public class MyBot {
@@ -216,11 +217,11 @@ public class MyBot {
             public void handleUpdates(Update update) {
                 Long messageId = update.message().messageId();
                 BaseResponse response = ActionsAPIHelper.sendMessage("Hello world!", messageId);
-                if(!response.isOk())
+                if (!response.isOk())
                     System.out.println("Error sending message: " + response.description());
             }
         });
-        
+
         // Run the bot
         dispatcher.runUpdateListener(bot);
     }

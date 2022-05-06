@@ -1,7 +1,7 @@
-package com.justlel.tgbot.yaml;
+package io.github.justlel.yaml;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.justlel.tgbot.configs.yamls.YamlInterface;
+import io.github.justlel.configs.yamls.YamlInterface;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.justlel.tgbot.models;
+package io.github.justlel.models;
 
 import com.pengrad.telegrambot.model.Update;
 

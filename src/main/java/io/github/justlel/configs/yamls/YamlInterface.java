@@ -1,4 +1,4 @@
-package com.justlel.tgbot.configs.yamls;
+package io.github.justlel.configs.yamls;
 
 
 import org.jetbrains.annotations.Nullable;

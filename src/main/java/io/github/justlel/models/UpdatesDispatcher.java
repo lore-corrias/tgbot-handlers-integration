@@ -1,9 +1,9 @@
-package com.justlel.tgbot.models;
+package io.github.justlel.models;
 
-import com.justlel.tgbot.api.ActionsAPIHelper;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Update;
+import io.github.justlel.api.ActionsAPIHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.lang.reflect.InvocationTargetException;

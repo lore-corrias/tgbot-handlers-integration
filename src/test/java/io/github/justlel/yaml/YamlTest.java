@@ -1,6 +1,6 @@
-package com.justlel.tgbot.yaml;
+package io.github.justlel.yaml;
 
-import com.justlel.tgbot.configs.YamlManager;
+import io.github.justlel.configs.YamlManager;
 import org.junit.Test;
 
 import java.io.File;

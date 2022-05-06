@@ -1,8 +1,8 @@
-package com.justlel.tgbot.configs;
+package io.github.justlel.configs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.justlel.tgbot.configs.yamls.YamlInterface;
+import io.github.justlel.configs.yamls.YamlInterface;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
