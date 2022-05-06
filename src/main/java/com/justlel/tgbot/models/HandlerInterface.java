@@ -10,7 +10,7 @@ import com.pengrad.telegrambot.model.Update;
  * @author justlel
  * @version 1.0
  */
-interface HandlerInterface {
+public interface HandlerInterface {
 
     /**
      * Once the update is dispatched, it will be passed to this method, which will
