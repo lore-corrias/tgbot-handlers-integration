@@ -11,17 +11,11 @@ An integration to [pengrad's Telegram Bot API](https://github.com/pengrad/java-t
 Integration is only available with maven, for now. Add this to your pom.xml:
 
 ```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.justlel</groupId>
+        <groupId>io.github.justlel</groupId>
         <artifactId>tgbot-handlers-integration</artifactId>
-        <version>${tgbot-handlers-integration.version}</version>
+        <version>1.0</version>
     </dependency>
 </dependencies>
 ```

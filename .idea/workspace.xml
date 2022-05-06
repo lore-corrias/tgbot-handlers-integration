@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="Updated pom.">
+    <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="Finally pushed the project to maven central repository! yey :D">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/api/ActionsAPIHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/api/ActionsAPIHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/configs/YamlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/configs/YamlManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/configs/yamls/YamlInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/configs/yamls/YamlInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/AbstractUpdateDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/AbstractUpdateDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/AbstractUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/AbstractUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/GenericUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/GenericUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/HandlerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/HandlerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/SpecificUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/SpecificUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models/UpdatesDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/UpdatesDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/justlel/tgbot/yaml/TestYaml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/justlel/yaml/TestYaml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/justlel/tgbot/yaml/YamlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/justlel/yaml/YamlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +103,7 @@
       <workItem from="1651835660795" duration="110000" />
       <workItem from="1651835783034" duration="917000" />
       <workItem from="1651836713447" duration="6665000" />
-      <workItem from="1651856063839" duration="5388000" />
+      <workItem from="1651856063839" duration="6479000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1651837241316</created>
@@ -137,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651857034969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edited package name in order to push the repository.">
+      <created>1651861471239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651861471239</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +158,9 @@
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Added README.md, LICENSE.md, plus minor fixes." />
     <MESSAGE value="Updated pom." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated pom." />
+    <MESSAGE value="Edited package name in order to push the repository." />
+    <MESSAGE value="Finally pushed the project to maven central repository! yey :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally pushed the project to maven central repository! yey :D" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

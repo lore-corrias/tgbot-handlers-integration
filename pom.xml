@@ -79,6 +79,10 @@
         </plugins>
     </build>
     <name>tgbot-handlers-integration</name>
+    <description>
+        An integration to pengrad's telegram-bot-api library that
+        helps to handle updates received by the bot.
+    </description>
     <url>https://github.com/justlel/tgbot-handlers-integration</url>
     <licenses>
         <license>
@@ -118,4 +122,9 @@
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+    <scm>
+        <connection>scm:git:git@github.com:justlel/tgbot-handlers-integration</connection>
+        <developerConnection>scm:git:ssh://github.com:justlel/tgbot-handlers-integration.git</developerConnection>
+        <url>https://github.com/justlel/tgbot-handlers-integration/tree/master</url>
+    </scm>
 </project>
