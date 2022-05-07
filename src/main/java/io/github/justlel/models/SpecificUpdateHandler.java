@@ -1,7 +1,6 @@
 package io.github.justlel.models;
 
 import com.pengrad.telegrambot.model.Update;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,8 +14,8 @@ import java.util.Map;
  * updates of a type like {@link UpdatesDispatcher.MessageUpdateTypes#COMMAND},
  * as they are all defined by the same UpdateType, and are yet managed differently depending on the command received.
  * Because of this, a specific update handler registers different handlers, all of which are indexed by a specific identifier.
- * The type of the identifier is determined by the parameter T, while the dispatching of the update is managed by the
- * method {@link #dispatchUpdate}, as defined by the child classes.
+ * The type of the identifier is determined by the parameter T, while handler to be used for the given update is return by the
+ * method {@link #returnUpdateHandler}, as defined by the child classes.
  * To register a handler for a specific update, use the {@link #registerSpecificHandler} method.
  * To see an example of Generic update handler, check the class {@link GenericUpdateHandler}.
  *
@@ -75,26 +74,13 @@ public abstract class SpecificUpdateHandler<T> extends AbstractUpdateHandler {
     }
 
     /**
-     * Dispatch the update received to a specific sub-handler.
-     * The process of dispatching is defined by the child classes, as long as
-     * the overridden method returns an UpdateHandler that is a child of {@link AbstractUpdateHandler},
-     * or null if no handler is found.
-     *
-     * @param update The update to be dispatched.
-     * @return The handler responsible for managing the dispatched update.
-     */
-    public abstract @Nullable AbstractUpdateHandler dispatchUpdate(Update update);
-
-    /**
      * Overrides the method {@link AbstractUpdateHandler#returnUpdateHandler}.
      * Since the updates received have to be dispatched to a specific handler,
-     * this method always returns the handler given by the {@link #dispatchUpdate} method.
+     * this method shall return the sub-handler to be used.
      *
      * @param update The update of which to get the handler.
      * @return The handler responsible for managing the dispatched update.
      */
     @Override
-    public AbstractUpdateHandler returnUpdateHandler(Update update) {
-        return dispatchUpdate(update);
-    }
+    public abstract HandlerInterface returnUpdateHandler(Update update);
 }

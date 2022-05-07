@@ -7,6 +7,7 @@ import io.github.justlel.api.ActionsAPIHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -33,16 +34,16 @@ public class UpdatesDispatcher extends AbstractUpdateDispatcher {
      * HashMap for the handlers of the {@link UpdatesDispatcher.MessageUpdateTypes}.
      * The handlers are stored in two different HashMaps to optimize the mapping to the enum.
      */
-    private final HashMap<MessageUpdateTypes, AbstractUpdateHandler> messageTypeHandlers = new HashMap<>();
+    private final HashMap<MessageUpdateTypes, HandlerInterface> messageTypeHandlers = new HashMap<>();
     /**
      * HashMap for the handlers of the {@link UpdatesDispatcher.GenericUpdateTypes}.
      * The handlers are stored in two different HashMaps to optimize the mapping to the enum.
      */
-    private final HashMap<GenericUpdateTypes, AbstractUpdateHandler> genericTypeHandlers = new HashMap<>();
+    private final HashMap<GenericUpdateTypes, HandlerInterface> genericTypeHandlers = new HashMap<>();
     /**
      * The default handler for the updates which don't have a specific one set.
      */
-    private AbstractUpdateHandler defaultUpdatesHandler;
+    private HandlerInterface defaultUpdatesHandler;
 
     /**
      * Default constructor.
@@ -91,27 +92,37 @@ public class UpdatesDispatcher extends AbstractUpdateDispatcher {
      */
     @Nullable
     private UpdateTypes getUpdateType(Update update) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
-        if (update.message() != null && !this.messageTypeHandlers.isEmpty()) {
-            for (MessageUpdateTypes messageUpdateType : this.messageTypeHandlers.keySet()) {
-                boolean secondCheck = false;
-                switch (messageUpdateType) {
-                    case PRIVATE_MESSAGE -> secondCheck = update.message().chat().type().equals(Chat.Type.Private);
-                    case GROUP_MESSAGE -> secondCheck = update.message().chat().type().equals(Chat.Type.group);
-                    case SUPERGROUP_MESSAGE ->
-                            secondCheck = update.message().chat().type().equals(Chat.Type.supergroup);
-                    case COMMAND -> secondCheck = update.message().text().startsWith("/");
-                }
-                if (!secondCheck) {
-                    if (updateMatchesType(update, messageUpdateType))
-                        return messageUpdateType;
-                } else {
-                    return messageUpdateType;
-                }
-            }
-        } else if (update.message() == null && !this.genericTypeHandlers.isEmpty()) {
+        if (update.message() == null && !this.genericTypeHandlers.isEmpty()) {
             for (GenericUpdateTypes genericUpdateType : this.genericTypeHandlers.keySet()) {
                 if (updateMatchesType(update, genericUpdateType))
                     return genericUpdateType;
+            }
+        } else if (update.message() != null && !this.messageTypeHandlers.isEmpty()) {
+            List<MessageUpdateTypes> ambiguousUpdateTypes = List.of(MessageUpdateTypes.PRIVATE_MESSAGE, MessageUpdateTypes.GROUP_MESSAGE, MessageUpdateTypes.SUPERGROUP_MESSAGE, MessageUpdateTypes.COMMAND);
+            List<UpdateTypes> unambiguousUpdateTypes = new ArrayList<>();
+            for (MessageUpdateTypes messageUpdateType : this.messageTypeHandlers.keySet()) {
+                if (!ambiguousUpdateTypes.contains(messageUpdateType)) {
+                    unambiguousUpdateTypes.add(messageUpdateType);
+                }
+            }
+            for (UpdateTypes unambiguousUpdateType : unambiguousUpdateTypes) {
+                if (this.updateMatchesType(update, unambiguousUpdateType)) {
+                    return unambiguousUpdateType;
+                }
+            }
+
+            for (MessageUpdateTypes ambiguousUpdateType : ambiguousUpdateTypes) {
+                boolean secondCheck = false;
+                if (update.message().text().startsWith("/"))
+                    return MessageUpdateTypes.COMMAND;
+                switch (ambiguousUpdateType) {
+                    case PRIVATE_MESSAGE -> secondCheck = update.message().chat().type() == Chat.Type.Private;
+                    case GROUP_MESSAGE -> secondCheck = update.message().chat().type() == Chat.Type.group;
+                    case SUPERGROUP_MESSAGE -> secondCheck = update.message().chat().type() == Chat.Type.supergroup;
+                }
+                if (secondCheck) {
+                    return ambiguousUpdateType;
+                }
             }
         }
         return null;
@@ -147,15 +158,16 @@ public class UpdatesDispatcher extends AbstractUpdateDispatcher {
      * Register a handler for a specific update type.
      * The handlers are stored in two different maps, one for generic updates, and one for message updates,
      * in order to improve the performance of the updateType mapping.
+     * If an handler is already registered for the same update type, it won't be replaced.
      *
      * @param updateType    The update type associated to the handler.
      * @param updateHandler The handler to be registered.
      */
     public void registerUpdatesHandler(UpdateTypes updateType, AbstractUpdateHandler updateHandler) {
         if (updateType instanceof MessageUpdateTypes) {
-            this.messageTypeHandlers.put((MessageUpdateTypes) updateType, updateHandler);
+            this.messageTypeHandlers.putIfAbsent((MessageUpdateTypes) updateType, updateHandler);
         } else if (updateType instanceof GenericUpdateTypes) {
-            this.genericTypeHandlers.put((GenericUpdateTypes) updateType, updateHandler);
+            this.genericTypeHandlers.putIfAbsent((GenericUpdateTypes) updateType, updateHandler);
         }
     }
 
@@ -179,7 +191,7 @@ public class UpdatesDispatcher extends AbstractUpdateDispatcher {
      * @param updateType The updateType of which to get the handler.
      * @return The update handler associated with the given updateType, null if not found.
      */
-    public @Nullable AbstractUpdateHandler getUpdateHandler(UpdateTypes updateType) {
+    public @Nullable HandlerInterface getUpdateHandler(UpdateTypes updateType) {
         if (!hasUpdateHandler(updateType) && !hasDefaultHandler()) {
             return null;
         }
@@ -211,7 +223,7 @@ public class UpdatesDispatcher extends AbstractUpdateDispatcher {
      * @return True if a handler is registered for the given updateType, false otherwise.
      */
     private boolean hasUpdateHandler(UpdateTypes updateType) {
-        return this.messageTypeHandlers.containsKey((MessageUpdateTypes) updateType) || this.genericTypeHandlers.containsKey((GenericUpdateTypes) updateType);
+        return messageTypeHandlers.containsKey(updateType) || this.genericTypeHandlers.containsKey(updateType);
     }
 
     /**
