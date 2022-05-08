@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="version 2.0.0-SNAPSHOT-2&#10;Added gradle wrappers">
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +272,7 @@
       <workItem from="1651947539100" duration="4412000" />
       <workItem from="1651954921557" duration="4928000" />
       <workItem from="1651995766984" duration="14450000" />
-      <workItem from="1652016127260" duration="1650000" />
+      <workItem from="1652016127260" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1651837241316</created>
@@ -332,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652017560423</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="version 2.0.0-SNAPSHOT-2&#10;Added gradle wrappers">
+      <created>1652017785511</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652017785511</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
