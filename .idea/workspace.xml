@@ -4,18 +4,81 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="Finally pushed the project to maven central repository! yey :D">
-      <change afterPath="$PROJECT_DIR$/sample.main.java/io/github/justlel/samplebot/SampleBot.java" afterDir="false" />
+    <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="version 2.0.0-SNAPSHOT-1&#10;Added integration for Gradle and GitHub Packages, has to be tested.&#10;Re-framed the tree of src -&gt; moved to library/src/io.github.justlel.tgbot&#10;Added sample with configs, README must be updated.">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/publish_github_and_maven.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samplebot/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samplebot/src/main/java/io/github/justlel/samplebot/SampleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samplebot/src/main/resources/sample-configs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/SpecificUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/SpecificUpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/UpdatesDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/UpdatesDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.main.java/io/github/justlel/samplebot/SampleBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/samplebot/src/main/java/io/github/justlel/samplebot/SampleBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/api/ActionsAPIHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/api/ActionsAPIHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/configs/YamlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/configs/YamlManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/configs/yamls/YamlInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/configs/yamls/YamlInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/AbstractUpdateDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/AbstractUpdateDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/AbstractUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/AbstractUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/GenericUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/GenericUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/HandlerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/HandlerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/SpecificUpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/SpecificUpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/justlel/models/UpdatesDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/io/github/justlel/tgbot/models/UpdatesDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/justlel/yaml/TestYaml.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/test/java/io/github/justlel/yaml/TestYaml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/justlel/yaml/YamlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/test/java/io/github/justlel/yaml/YamlTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/test/resources/test_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/sample">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/sample">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/library">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/samplebot">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tgbot-handlers-integrtion" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tgbot-handlers-integrtion" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,11 +93,23 @@
         <option value="just" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="28lF1ZCFYlJNonRbVDZ1uVu2yTu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,80 +123,128 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/just/Scrivania/progetti/progetti_in_test/tgbot-handlers-integration&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/just/Scrivania/progetti/progetti_in_test/tgbot-handlers-integration/library&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.28850573&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library" />
       <recent name="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/configs" />
       <recent name="$PROJECT_DIR$/src/main/java/com/justlel/tgbot" />
       <recent name="$PROJECT_DIR$/src/main/java/com/justlel/tgbot/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/samplebot/src" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/library" />
+      <recent name="$PROJECT_DIR$/sample/src/main/java" />
+      <recent name="$PROJECT_DIR$/sample.main/io" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.justlel.tgbot" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.io.github.justlel.samplebot.SampleBot">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.github.justlel.Main" />
-      <module name="tgbot-handlers-integration" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.github.justlel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.tgbot-handlers-integration [clean]">
+    <configuration name="tgbot-handlers-integration [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="io.github.justlel.samplebot.SampleBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.github.justlel.samplebot.SampleBot" />
-      <module name="tgbot-handlers-integration" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.github.justlel.samplebot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="tgbot-handlers-integration:library [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/library" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="YamlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tgbot-handlers-integration" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.justlel.tgbot.yaml.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.justlel.tgbot.yaml" />
-      <option name="MAIN_CLASS_NAME" value="com.justlel.tgbot.yaml.YamlTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="tgbot-handlers-integration:samplebot [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/samplebot" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.io.github.justlel.samplebot.SampleBot" />
-      <item itemvalue="JUnit.YamlTest" />
-    </list>
+    <configuration name="tgbot-handlers-integration:samplebot [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/samplebot" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="samplebot-1.0-all.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/samplebot/build/libs/samplebot-1.0-all.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.io.github.justlel.samplebot.SampleBot" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.YamlTest" />
+        <item itemvalue="Gradle.tgbot-handlers-integration [clean]" />
+        <item itemvalue="Gradle.tgbot-handlers-integration:library [shadowJar]" />
+        <item itemvalue="Gradle.tgbot-handlers-integration:samplebot [shadowJar]" />
+        <item itemvalue="Gradle.tgbot-handlers-integration:samplebot [clean]" />
+        <item itemvalue="JAR Application.samplebot-1.0-all.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +264,12 @@
       <workItem from="1651836713447" duration="6665000" />
       <workItem from="1651856063839" duration="6513000" />
       <workItem from="1651863353786" duration="8385000" />
-      <workItem from="1651932531832" duration="2786000" />
+      <workItem from="1651932531832" duration="3076000" />
+      <workItem from="1651946864697" duration="160000" />
+      <workItem from="1651947539100" duration="4412000" />
+      <workItem from="1651954921557" duration="4928000" />
+      <workItem from="1651995766984" duration="14450000" />
+      <workItem from="1652016127260" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1651837241316</created>
@@ -178,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651862796454</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="version 1.1.1&#10;Fixed update recognition flow in the UpdatesDispatcher&#10;Added a sample class with an example of an update handling bot">
+      <created>1651935585970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651935585970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,9 +340,15 @@
     <MESSAGE value="Updated pom." />
     <MESSAGE value="Edited package name in order to push the repository." />
     <MESSAGE value="Finally pushed the project to maven central repository! yey :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally pushed the project to maven central repository! yey :D" />
+    <MESSAGE value="version 1.1.1&#10;Fixed update recognition flow in the UpdatesDispatcher&#10;Added a sample class with an example of an update handling bot" />
+    <MESSAGE value="version 2.0.0-SNAPSHOT-1&#10;Added integration for Gradle and GitHub Packages, has to be tested.&#10;Re-framed the tree of src -&gt; moved to library/src/io.github.justlel.tgbot&#10;Added sample with configs, README must be updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2.0.0-SNAPSHOT-1&#10;Added integration for Gradle and GitHub Packages, has to be tested.&#10;Re-framed the tree of src -&gt; moved to library/src/io.github.justlel.tgbot&#10;Added sample with configs, README must be updated." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

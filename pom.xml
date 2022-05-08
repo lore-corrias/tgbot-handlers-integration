@@ -5,7 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.justlel</groupId>
     <artifactId>tgbot-handlers-integration</artifactId>
-    <version>1.1.1</version>
+    <version>2.0.0-SNAPSHOT-1</version>
+    <name>tgbot-handlers-integration</name>
+    <description>
+        An integration to pengrad's telegram-bot-api library that
+        helps to handle updates received by the bot.
+    </description>
+    <url>https://github.com/justlel/tgbot-handlers-integration</url>
+    <licenses>
+        <license>
+            <name>GNU General Public License v3.0</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>justlel</id>
+        </developer>
+    </developers>
     <properties>
         <java.version>18</java.version>
         <maven.compiler.release>18</maven.compiler.release>
@@ -78,24 +96,6 @@
             </plugin>
         </plugins>
     </build>
-    <name>tgbot-handlers-integration</name>
-    <description>
-        An integration to pengrad's telegram-bot-api library that
-        helps to handle updates received by the bot.
-    </description>
-    <url>https://github.com/justlel/tgbot-handlers-integration</url>
-    <licenses>
-        <license>
-            <name>GNU General Public License v3.0</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <id>justlel</id>
-        </developer>
-    </developers>
 
     <dependencies>
         <dependency>

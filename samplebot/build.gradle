@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+version '2.0.0-SNAPSHOT-1'
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'io.github.justlel.samplebot.SampleBot'
+    }
+}
+
+dependencies {
+    shadow localGroovy()
+    shadow gradleApi()
+
+    implementation project(':library')
+    implementation 'com.github.pengrad:java-telegram-bot-api:6.0.1'
+}
