@@ -7,6 +7,7 @@
     <list default="true" id="3adecaa8-72c6-467f-a9f1-821c8df9fd8b" name="Changes" comment="updated gradle for publishing in the github repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +286,7 @@
       <workItem from="1651947539100" duration="4412000" />
       <workItem from="1651954921557" duration="4928000" />
       <workItem from="1651995766984" duration="14450000" />
-      <workItem from="1652016127260" duration="4687000" />
+      <workItem from="1652016127260" duration="5983000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1651837241316</created>
@@ -364,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652019668011</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updated gradle for publishing in the github repository">
+      <created>1652020828109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652020828109</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
